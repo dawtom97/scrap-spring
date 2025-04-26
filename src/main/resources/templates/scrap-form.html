@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>Wyszukiwarka</h2>
+
+    <form onsubmit="sendQuery(event)">
+        <label for="Query">Wprowadź tytuł</label>
+        <input type="text" name="query" id="Query">
+        <button type="submit" id="SearchBtn">Szukaj</button>
+
+    </form>
+
+    <p id="Loader" style="display:none;">Pobieranie danych.....</p>
+
+    <h4>Wynik</h4>
+    <pre id="Results">
+
+    </pre>
+
+
+
+
+    <form method="post" th:action="@{/scrap-operation}">
+        <input type="text" name="query" placeholder="Tytul">
+        <button type="submit">Szukaj</button>
+    </form>
+
+
+    <script src="/js/sendQuery.js"></script>
+</body>
+</html>

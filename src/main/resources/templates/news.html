@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Wyświetl w pętli wiadomości w następującej strukturze
+
+-- karta
+   -- zdjecie JEŚLI PODANO
+   -- tytul
+   -- źródło i data dodania
+   -- przycisk więcej
+
+   -- th:each, th:if, th:alt, th:src
+
+
+-->
+
+<div th:each="scrap : ${scraps}">
+    <h3 th:text="${scrap.title}"></h3>
+    <br>
+    <a th:href="${scrap.link}" target="_blank">Czytaj więcej</a>
+</div>
+
+
+</body>
+</html>
