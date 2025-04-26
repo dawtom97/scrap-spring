@@ -1,4 +1,4 @@
-FROM maven:3.9.6-openjdk-19 AS build
+FROM infotechsoft/maven:3.9.6-openjdk-17 AS build
 # Ustaw katalog roboczy
 WORKDIR /app
 # Kopiuj pliki projektu
@@ -7,7 +7,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Etap 2: Uruchamianie
-FROM openjdk:19-jdk-slim
+FROM openjdk:17-jdk-slim
 # Katalog roboczy
 WORKDIR /app
 # Skopiuj zbudowany plik JAR
